@@ -1,11 +1,12 @@
 import unittest
+
 from app import app
 
+
 class TestFineEndpoint(unittest.TestCase):
-    
     def setUp(self):
         self.client = app.test_client()
-        
+
     def test_fine_is_returned_as_json(self):
         resp = self.client.get("/fine?days=5")
         self.assertEqual(resp.status_code, 200)
@@ -23,5 +24,6 @@ class TestFineEndpoint(unittest.TestCase):
         resp = self.client.get("/fine?days=-1")
         self.assertEqual(resp.status_code, 400)
 
-    if __name__ == "__main__":
-        unittest.main()
+
+if __name__ == "__main__":
+    unittest.main()
