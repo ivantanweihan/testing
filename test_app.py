@@ -1,5 +1,6 @@
 import unittest
 from app import app
+
 class TestFineEndpoint(unittest.TestCase):
     
     def setUp(self):
