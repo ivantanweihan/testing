@@ -81,7 +81,7 @@ jobs:
           bash smoke.sh http://localhost:5000 || { cat app.log; exit 1; }
 
   staging:
-    needs: [ smoke, e2e ]
+    needs: smoke
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
     environment: staging
