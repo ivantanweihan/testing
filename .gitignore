@@ -222,3 +222,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+__pycache__/app.cpython-311.pyc
+__pycache__/test_app.cpython-311.pyc
+__pycache__/test_duckfine.cpython-311.pyc
